@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Address Book</title>
+    <style type="text/css">
+        .ab {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size: small;
+            color: #993300;
+            background-color: #CCFFCC;
+            padding: 5px;
+            height: 100px;
+            width: 350px;
+            border: thin dotted #993300;
+        }
+    </style>
+    <script type="text/javascript">
+        function addrBook(fname, lname, email) {
+            this.fname = fname;
+            this.lname = lname;
+            this.email = email;
+        }
+
+        addrBook.prototype.display = function() {
+            var adrbook = "<p class='ab'>First Name: " + this.fname + "<br />";
+            adrbook += "Last Name: " + this.lname + "<br />";
+            adrbook += "Email Address: " + this.email + "</p>";
+            document.write(adrbook);
+        };
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        var aB1 = new addrBook("Rainer", "Correos", "rcorreos@bs.com");
+        var aB2 = new addrBook("Chzar", "Alberastine", "calberastine@bs.com");
+
+        aB1.display();
+        aB2.display();
+    </script>
+</body>
+</html>

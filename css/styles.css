@@ -1,0 +1,131 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: linear-gradient(to right, #ff9966, #ff5e62);
+    color: white;
+    padding: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
+}
+
+table {
+    width: 80%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+    transition: 0.3s ease-in-out;
+}
+
+.jho { color: darkred; }
+.jen { color: darkgreen; }
+.neth { color: darkblue; }
+.dolf { color: darkorange; font-style: italic; border-bottom: 2px solid darkorange; }
+.raika { color: purple; }
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+
+blockquote {
+    font-size: 20px;
+    font-style: italic;
+    color: #444;
+    margin: 30px auto;
+    width: 60%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.05);
+    border-left: 5px solid #ff5e62;
+}
+
+.profile-card {
+    width: 50%;
+    background: white;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-card:hover {
+    transform: scale(1.05);
+}
+.profile-pic {
+    max-width: 200px; 
+    height: auto; 
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.back-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 600px) {
+    table {
+        width: 100%;
+    }
+    th, td {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    .profile-card {
+        width: 80%;
+    }
+}

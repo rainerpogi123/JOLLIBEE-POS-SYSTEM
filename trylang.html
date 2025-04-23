@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>Address Book</title>
+    <style type="text/css">
+        .ab {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size: small;
+            color: #993300;
+            background-color: #CCFFCC;
+            padding: 5px;
+            height: 100px;
+            width: 350px;
+            border: thin dotted #993300;
+        }
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+        function addBook(fname, lname, email) {
+            this.fname = fname;
+            this.lname = lname;
+            this.email = email;
+            
+            var adbook = "<p class='ab'>First Name: " + fname + "<br />";
+            adbook += "Last Name: " + lname + "<br />";
+            adbook += "Email Address: " + email + "</p>";
+            document.write(adbook);
+        }
+
+        var ab1 = new addBook('Roger', 'Williams', 'rwilliams@gmail.com');
+        var ab2 = new addBook('Rose', 'Schultz', 'rose_@hearthlink.net');
+    </script>
+</body>
+</html>

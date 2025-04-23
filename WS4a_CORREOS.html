@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Velocity and Acceleration Calculator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Velocity & Acceleration Calculator</h2>
+        <label>Initial Velocity (m/s):</label>
+        <input type="number" id="initialVelocity"><br>
+        <label>Final Velocity (m/s):</label>
+        <input type="number" id="finalVelocity"><br>
+        <label>Time (s):</label>
+        <input type="number" id="time"><br>
+        <button onclick="calculate()">Calculate</button>
+        <p id="averageVelocity"></p>
+        <p id="acceleration"></p>
+    </div> 
+    <script>
+        function calculate() {
+            var vi = parseFloat(document.getElementById("initialVelocity").value);
+            var vf = parseFloat(document.getElementById("finalVelocity").value);
+            var t = parseFloat(document.getElementById("time").value);
+            if (isNaN(vi) || isNaN(vf) || isNaN(t) || t <= 0) {
+                alert("Please enter valid numbers.");
+                return;
+            } 
+            var avgVelocity = (vi + vf) / 2;
+            var acceleration = (vf - vi) / t;
+                        document.getElementById("averageVelocity").innerHTML = "Average Velocity: " + avgVelocity.toFixed(2) + " m/s";
+            document.getElementById("acceleration").innerHTML = "Acceleration: " + acceleration.toFixed(2) + " m/s²";
+        }
+    </script>
+</body>
+</html>
